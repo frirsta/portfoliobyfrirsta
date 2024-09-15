@@ -133,7 +133,7 @@ export default function Portfolio() {
               </Button>
             </div>
           </div>
-          <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] opacity-10 bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/placeholder.png?height=1080&width=1920')] opacity-10 bg-cover bg-center"></div>
         </section>
 
         <section id="projects" className="bg-gray-800 py-20">
@@ -485,22 +485,9 @@ export default function Portfolio() {
               </div>
               <Button
                 type="submit"
-                disabled={isSubmitting}
                 className="w-full bg-[#d4adfc] text-gray-900 hover:bg-[#d4adfc]/90"
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </Button>
+              ></Button>
             </form>
-            {submitStatus === "success" && (
-              <p className="mt-4 text-green-400 text-center">
-                Message sent successfully!
-              </p>
-            )}
-            {submitStatus === "error" && (
-              <p className="mt-4 text-red-400 text-center">
-                Error sending message. Please try again.
-              </p>
-            )}
           </div>
         </section>
       </main>

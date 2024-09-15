@@ -35,10 +35,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
-
-
-
 npx shadcn@latest add button
 
 npx shadcn@latest add input
@@ -53,6 +49,6 @@ npx shadcn@latest add skeleton
 
 npm i sharp
 
-
 npm install lucide-react
 npm install nodemailer
+npm install --save @next/bundle-analyzer
