@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import { AnimatedText, FadeIn, HoverScale } from "@/components/animations";
 const Contact = () => {
   return (
