@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { AnimatedText, FadeIn, HoverScale } from "@/components/animations";
+import { AnimatedText, FadeIn, HoverScale } from "./Animations";
 const Contact = () => {
   return (
     <section id="contact" className="bg-gray-800 py-20">
