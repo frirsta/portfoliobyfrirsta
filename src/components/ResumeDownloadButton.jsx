@@ -16,10 +16,7 @@ const ResumeDownloadButton = () => {
 
   return (
     <HoverScale>
-      <Button
-        onClick={handleDownload}
-        className="bg-[#D4ADFC] text-[#0C134F] hover:bg-[#D4ADFC]/90 transition-colors"
-      >
+      <Button variant="secondary" onClick={handleDownload}>
         <Download className="mr-2 h-4 w-4" /> Download Resume
       </Button>
     </HoverScale>

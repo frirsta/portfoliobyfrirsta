@@ -49,7 +49,7 @@ const Contact = () => {
                 type="text"
                 name="name"
                 id="name"
-                className="px-4 bg-[#D4ADFC]/5 rounded-sm border border-[#D4ADFC] block w-full py-2 text-white placeholder:text-gray-400 sm:text-sm"
+                className="px-4 bg-[#D4ADFC]/5 rounded-sm border border-[#D4ADFC] block w-full py-2  placeholder:text-gray-400 sm:text-sm"
                 placeholder="Your Name"
                 required
               />
@@ -62,7 +62,7 @@ const Contact = () => {
                 type="email"
                 name="email"
                 id="email"
-                className="px-4 bg-[#D4ADFC]/5 rounded-sm border border-[#D4ADFC] block w-full py-2 text-white placeholder:text-gray-400 sm:text-sm"
+                className="px-4 bg-[#D4ADFC]/5 rounded-sm border border-[#D4ADFC] block w-full py-2  placeholder:text-gray-400 sm:text-sm"
                 placeholder="your@email.com"
                 required
               />
@@ -78,16 +78,13 @@ const Contact = () => {
                 name="message"
                 id="message"
                 rows="4"
-                className="px-4 bg-[#D4ADFC]/5 rounded-sm border border-[#D4ADFC] block w-full py-2 text-white placeholder:text-gray-400 sm:text-sm"
+                className="px-4 bg-[#D4ADFC]/5 rounded-sm border border-[#D4ADFC] block w-full py-2  placeholder:text-gray-400 sm:text-sm"
                 placeholder="Your message here..."
                 required
               ></textarea>
             </div>
             <HoverScale>
-              <Button
-                type="submit"
-                className="w-full bg-[#D4ADFC] text-gray-900 hover:bg-[#D4ADFC]/90"
-              >
+              <Button type="submit" variant="secondary" className="w-full">
                 SEND MESSAGE
               </Button>
             </HoverScale>

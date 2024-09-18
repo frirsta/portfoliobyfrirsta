@@ -56,7 +56,7 @@ export default function SkillGrid() {
               </div>
             </div>
             <div className="flex-grow">
-              <h3 className=" text-lg font-semibold mb-2">{skill.name}</h3>
+              <h3 className="text-lg font-semibold mb-2">{skill.name}</h3>
               <ul className="space-y-1">
                 {skill.skills.map((item) => (
                   <li key={item} className="text-sm">

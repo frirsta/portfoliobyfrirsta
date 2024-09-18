@@ -39,25 +39,15 @@ const ProjectCard = ({ project }) => (
           className="w-full h-48 object-cover"
         />
         <div className="p-6">
-          <h3 className="mb-2 text-xl font-semibold text-[#D4ADFC]">
-            {project.title}
-          </h3>
-          <p className="mb-4 text-[#D4ADFC]">{project.description}</p>
+          <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
+          <p className="mb-4">{project.description}</p>
           <div className="flex justify-between">
-            <Button
-              asChild
-              variant="outline"
-              className="w-[45%] bg-[#d4adfc]/5 border-[#d4adfc] text-[#D4ADFC] hover:bg-[#D4ADFC]/90 hover:text-[#0C134F]"
-            >
+            <Button asChild variant="outline">
               <Link href={project.github} target="_blank">
                 View Code
               </Link>
             </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="w-[45%] bg-[#d4adfc]/5 border-[#d4adfc] text-[#D4ADFC] hover:bg-[#D4ADFC]/90 hover:text-[#0C134F]"
-            >
+            <Button asChild variant="outline">
               <Link href={project.demo} target="_blank">
                 Live Demo
               </Link>
