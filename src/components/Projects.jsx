@@ -19,7 +19,7 @@ const projects = [
     title: "Task Management System",
     description:
       "Interactive data visualisation dashboard using React, Nivo, and Material-UI. Integrated various charts and light/dark theme support.",
-    image: "/placeholder.png",
+    image: "/dashboard.png",
     github: "https://github.com/frirsta/YourDashboardByFrirsta",
     demo: "https://yourdashboardbyfrirsta.netlify.app/",
     direction: "right",
