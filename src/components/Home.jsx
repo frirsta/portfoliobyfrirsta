@@ -4,16 +4,11 @@ import { AnimatedText, FadeIn, HoverScale } from "./Animations";
 
 const Home = () => {
   return (
-    <section id="home" className="relative overflow-hidden py-20 md:py-32">
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <AnimatedText
-          text="Web Designer & Developer"
-          classname={
-            "text-4xl sm:text-5xl md:text-6xl text-[#d4adfc] font-thin"
-          }
-        />
+    <section id="home" className="relative overflow-hidden">
+      <div className="container text-center relative z-10">
+        <AnimatedText text="Web Designer & Developer" />
         <FadeIn delay={0.5}>
-          <p className="mb-8 text-xl text-[#D4ADFC]">
+          <p className="mb-8 text-xl">
             Crafting beautiful and functional web experiences
           </p>
         </FadeIn>
@@ -23,7 +18,7 @@ const Home = () => {
               <Button
                 asChild
                 variant="secondary"
-                className="bg-[#D4ADFC] border-[#D4ADFC] hover:bg-[#D4ADFC]/5 hover:text-[#D4ADFC] text-[#0C134F]"
+                className="bg-[#D4ADFC] border-[#D4ADFC] hover:bg-[#D4ADFC]/5 hover text-[#0C134F]"
               >
                 <a href="#resume">View Resume</a>
               </Button>
@@ -32,7 +27,7 @@ const Home = () => {
               <Button
                 asChild
                 variant="outline"
-                className="bg-[#D4ADFC]/5 border-[#D4ADFC] text-[#D4ADFC] hover:bg-[#D4ADFC]/90 hover:text-[#0C134F]"
+                className="bg-[#D4ADFC]/5 border-[#D4ADFC] hover:bg-[#D4ADFC]/90 hover:text-[#0C134F]"
               >
                 <a href="#contact">Contact</a>
               </Button>
@@ -40,7 +35,6 @@ const Home = () => {
           </div>
         </FadeIn>
       </div>
-      <div className="absolute inset-0 bg-[url('/placeholder.png?height=1080&width=1920')] opacity-10 bg-cover bg-center"></div>
     </section>
   );
 };

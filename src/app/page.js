@@ -6,11 +6,13 @@ import About from "@/components/About";
 import Resume from "@/components/Resume";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Background from "@/components/Background";
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gray-900 text-[#D4ADFC]">
+    <div className="min-h-screen">
       <Header />
       <main>
+        <Background />
         <Home />
         <Projects />
         <About />

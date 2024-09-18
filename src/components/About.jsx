@@ -5,25 +5,17 @@ import { AnimatedText, SlideIn, FadeIn } from "./Animations";
 
 const About = () => {
   return (
-    <section id="about" className="py-20">
-      <div className="container mx-auto px-4 flex justify-center">
+    <section id="about">
+      <div className="container flex justify-center">
         <div className="flex flex-col justify-between items-baseline">
           <div className="flex justify-between flex-col min-[992px]:flex-row min-[992px]:items-center p-5">
             <SlideIn direction="left">
               <div className="min-[992px]:w-[400px] flex flex-col items-start">
                 <div className="flex min-[992px]:flex-col">
-                  <AnimatedText
-                    text="I'm "
-                    classname={
-                      "text-[70px] sm:text-[100px] font-thin"
-                    }
-                  />
-                  <AnimatedText
-                    text="Frirsta"
-                    classname={
-                      "text-[70px] sm:text-[100px] font-thin sm:mb-10"
-                    }
-                  />
+                  <div className="title-container">
+                    <AnimatedText text="I'm " />
+                    <AnimatedText text="Frirsta" />
+                  </div>
                 </div>
                 <ResumeDownloadButton />
               </div>

@@ -51,17 +51,15 @@ export default function SkillGrid() {
         <ScaleIn key={skill.name} delay={0.2}>
           <div className="bg-[#1E1E2E] border border-[#6E6A85] rounded-lg p-6 flex items-start space-x-4">
             <div className="flex-shrink-0">
-              <div className="w-12 h-12 rounded-full bg-[#2A2A3C] flex items-center justify-center text-[#D4ADFC]">
+              <div className="w-12 h-12 rounded-full bg-[#2A2A3C] flex items-center justify-center ">
                 {skill.icon}
               </div>
             </div>
             <div className="flex-grow">
-              <h3 className="text-[#D4ADFC] text-lg font-semibold mb-2">
-                {skill.name}
-              </h3>
+              <h3 className=" text-lg font-semibold mb-2">{skill.name}</h3>
               <ul className="space-y-1">
                 {skill.skills.map((item) => (
-                  <li key={item} className="text-[#B8B5C6] text-sm">
+                  <li key={item} className="text-sm">
                     {item}
                   </li>
                 ))}

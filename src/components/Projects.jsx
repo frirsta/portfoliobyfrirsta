@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { SlideIn } from "./Animations";
+import { AnimatedText, SlideIn } from "./Animations";
 
 const projects = [
   {
@@ -71,13 +71,11 @@ const ProjectCard = ({ project }) => (
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-gray-800 py-20">
-      <div className="container mx-auto px-4 max-w-[1000px]">
-        <h2 className="mb-12 text-center">
-          <span className="text-4xl sm:text-5xl md:text-6xl text-[#d4adfc] font-thin">
-            Featured Projects
-          </span>
-        </h2>
+    <section id="projects">
+      <div className="container">
+        <div className="title-container">
+          <AnimatedText text="Projects" />
+        </div>
         <div className="grid gap-8 md:grid-cols-2 justify-items-center">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />

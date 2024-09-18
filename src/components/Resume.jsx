@@ -4,9 +4,9 @@ import EducationExperience from "./EducationExperience";
 
 const Resume = () => {
   return (
-    <section id="resume" className="py-20">
-      <div className="container mx-auto px-4 flex justify-center">
-        <div className="w-[902px] flex flex-col-reverse min-[992px]:flex-row justify-between">
+    <section id="resume">
+      <div className="container flex items-center justify-center">
+        <div className="flex flex-col-reverse min-[992px]:flex-row justify-between">
           <div className="w-full">
             <SkillGrid />
           </div>

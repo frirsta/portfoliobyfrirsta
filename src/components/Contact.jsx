@@ -28,12 +28,11 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="bg-gray-800 py-20">
-      <div className="container mx-auto px-4 max-w-md">
-        <AnimatedText
-          text="Get in Touch"
-          classname="mb-6 text-4xl sm:text-5xl md:text-6xl text-[#D4ADFC] font-thin"
-        />
+    <section id="contact">
+      <div className="container">
+        <div className="title-container">
+          <AnimatedText text="Get in Touch" />
+        </div>
         <FadeIn delay={0.3}>
           <form
             className="space-y-6"
