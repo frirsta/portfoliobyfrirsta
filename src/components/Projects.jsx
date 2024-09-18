@@ -9,7 +9,7 @@ const projects = [
     title: "Weather Dashboard",
     description:
       "Real-time weather app using React and OpenWeather API. Built a responsive layout with Material UI and implemented day/night mode.",
-    image: "/placeholder.png",
+    image: "/weather.png",
     github: "https://github.com/frirsta/WeatherByFrirsta",
     demo: "https://weatherbyfrirsta.netlify.app/",
     direction: "left",

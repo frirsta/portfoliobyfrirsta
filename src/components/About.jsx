@@ -15,13 +15,13 @@ const About = () => {
                   <AnimatedText
                     text="I'm "
                     classname={
-                      "text-[#D4ADFC] text-[70px] sm:text-[100px] font-thin"
+                      "text-[70px] sm:text-[100px] font-thin"
                     }
                   />
                   <AnimatedText
                     text="Frirsta"
                     classname={
-                      "text-[#D4ADFC] text-[70px] sm:text-[100px] font-thin sm:mb-10"
+                      "text-[70px] sm:text-[100px] font-thin sm:mb-10"
                     }
                   />
                 </div>
@@ -33,7 +33,7 @@ const About = () => {
                 <Image
                   width={"1000"}
                   height={"1000"}
-                  src="/placeholder.png"
+                  src="/About.png"
                   alt="Frirsta"
                   className="object-contain w-[100%] min-[992px]:w-[400px] rounded-3xl drop-shadow-xl mt-10"
                 />
@@ -41,7 +41,7 @@ const About = () => {
             </SlideIn>
           </div>
           <FadeIn delay={0.5}>
-            <div className="w-full sm:w-[587px] text-[#D4ADFC] text-3xl font-normal mt-20 sm:mt-12 p-5">
+            <div className="w-full sm:w-[587px] text-3xl font-normal mt-20 sm:mt-12 p-5">
               I&apos;m Frirsta - a front-end developer based in Stockholm. After
               a career in retail, I transitioned into software development
               driven by my passion for problem-solving and designing and
