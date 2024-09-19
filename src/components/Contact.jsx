@@ -17,37 +17,70 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(null);
+
     try {
-      setStatus("pending");
-      setError(null);
-      const myForm = event.target;
-      const formData = new FormData(myForm);
-      const res = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+      // Simulate an API call
+      const response = await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // Randomly succeed or fail
+          if (Math.random() > 0.5) {
+            resolve({ ok: true });
+            setSuccess(true);
+            setFormData({
+              name: "",
+              email: "",
+              message: "",
+            });
+          } else {
+            reject(new Error("Failed to submit form"));
+            setErrorMessage(true);
+          }
+        }, 1000);
       });
-      if (res.status === 200) {
-        setStatus("ok");
-        setSuccess(true);
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
+
+      if (response.ok) {
+        setShowThankYou(true);
       } else {
-        setStatus("error");
-        setError(`${res.status} ${res.statusText}`);
-        setErrorMessage(true);
+        throw new Error("Failed to submit form");
       }
-    } catch (e) {
-      setStatus("error");
-      setError(`${e}`);
-      console.error(e);
+    } catch (err) {
+      setError("Oops! Something went wrong. Please try again later.");
     }
   };
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+  //   try {
+  //     setStatus("pending");
+  //     setError(null);
+  //     const myForm = event.target;
+  //     const formData = new FormData(myForm);
+  //     const res = await fetch("/__forms.html", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //       body: new URLSearchParams(formData).toString(),
+  //     });
+  //     if (res.status === 200) {
+  //       setStatus("ok");
+  //       setSuccess(true);
+  //       setFormData({
+  //         name: "",
+  //         email: "",
+  //         message: "",
+  //       });
+  //     } else {
+  //       setStatus("error");
+  //       setError(`${res.status} ${res.statusText}`);
+  //       setErrorMessage(true);
+  //     }
+  //   } catch (e) {
+  //     setStatus("error");
+  //     setError(`${e}`);
+  //     console.error(e);
+  //   }
+  // };
   return (
     <section id="contact">
       <div className="container">
@@ -58,7 +91,7 @@ const Contact = () => {
           <form
             className="space-y-6"
             name="contact"
-            onSubmit={handleFormSubmit}
+            onSubmit={handleSubmit}
             method="POST"
             data-netlify="true"
           >
@@ -117,12 +150,12 @@ const Contact = () => {
                 SEND MESSAGE
               </Button>
             </HoverScale>
-            {status === "ok" && success && (
+            {success && (
               <div className="alert alert-success">
                 <ThankYouAnimation onClose={() => setSuccess(false)} />
               </div>
             )}
-            {status === "error" && errorMessage && (
+            {errorMessage && (
               <div className="alert alert-error">
                 <ContactFormError
                   message="Oops! Something went wrong. Please try again later."
