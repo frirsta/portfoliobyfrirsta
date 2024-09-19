@@ -53,3 +53,5 @@ npm install lucide-react
 npm install nodemailer
 npm install --save @next/bundle-analyzer
 npm install framer-motion
+
+canvas-confetti
