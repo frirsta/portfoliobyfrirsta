@@ -55,3 +55,4 @@ npm install --save @next/bundle-analyzer
 npm install framer-motion
 
 canvas-confetti
+npm install gsap
