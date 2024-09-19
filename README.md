@@ -1,6 +1,12 @@
 # Portfolio by Frirsta
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bc4d80cc-e721-4cb7-8f32-ec84190490bd/deploy-status)](https://app.netlify.com/sites/portfoliobyfrirsta/deploys)
+
 Welcome to my personal portfolio website! This project is built with **Next.js** and showcases my work, skills, and experiences as a web designer and developer.
+
+You can check out the live demo of this portfolio [here](https://portfoliobyfrirsta.netlify.app/).
+
+<img src="public/mockups_portfolio.png" width="100%" height="100%" styles="object-fit: contain;" />
 
 ## Features
 
