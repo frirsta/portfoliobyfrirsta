@@ -47,7 +47,7 @@ export default function ThankYouAnimation({ onClose }) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            I'll respond as soon as possible!
+            I&apos;ll respond as soon as possible!
           </motion.p>
         )}
         <motion.button
