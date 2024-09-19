@@ -92,7 +92,7 @@ const Contact = () => {
                 SEND MESSAGE
               </Button>
             </HoverScale>
-            {status === "ok" && error === null && (
+            {status === "ok" && error !== null && (
               <div className="alert alert-success">
                 <ThankYouAnimation onClose={() => setError(null)} />
               </div>
