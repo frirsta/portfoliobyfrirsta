@@ -23,7 +23,7 @@ const experienceData = [
 ];
 
 const Section = ({ title, items, renderItem }) => (
-  <Card className="bg-gray-900  mb-8 border-none">
+  <Card className="bg-[#0d0d23] mb-8 border-none">
     <CardHeader>
       <CardTitle className="text-2xl font-extralight tracking-wide">
         {title}
@@ -43,21 +43,21 @@ const Section = ({ title, items, renderItem }) => (
 
 const EducationExperience = () => {
   return (
-    <div className="w-full min-[992px]:max-w-md mx-auto">
+    <div className="w-full">
       <ScaleIn>
         <Section
           title="EDUCATION"
           items={educationData}
           renderItem={(item) => (
             <div className="flex justify-between items-baseline">
-              <div className=" text-xs tracking-tight">{item.period}</div>
-              <div className="text-right">
+              <div className="text-xs tracking-tight w-[40%]">
+                {item.period}
+              </div>
+              <div className="text-right w-full">
                 <div className="text-lg font-normal tracking-wide">
                   {item.institution}
                 </div>
-                <div className=" text-xs tracking-tight w-full">
-                  {item.degree}
-                </div>
+                <div className="text-xs tracking-tight">{item.degree}</div>
               </div>
             </div>
           )}
@@ -69,12 +69,12 @@ const EducationExperience = () => {
           items={experienceData}
           renderItem={(item) => (
             <div className="flex justify-between items-baseline">
-              <div className=" text-xs tracking-tight">{item.period}</div>
+              <div className="text-xs tracking-tight">{item.period}</div>
               <div className="text-right">
                 <div className="text-lg font-normal tracking-wide">
                   {item.position}
                 </div>
-                <div className=" text-xs tracking-tight">{item.company}</div>
+                <div className="text-xs tracking-tight">{item.company}</div>
               </div>
             </div>
           )}

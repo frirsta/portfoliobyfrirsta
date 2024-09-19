@@ -46,12 +46,12 @@ const skills = [
 
 export default function SkillGrid() {
   return (
-    <div className="grid grid-cols-1 gap-6 p-6">
+    <div className="grid grid-cols-1 gap-6 min-[992px]:pr-6">
       {skills.map((skill) => (
         <ScaleIn key={skill.name} delay={0.2}>
-          <div className="bg-[#1E1E2E] border border-[#6E6A85] rounded-lg p-6 flex items-start space-x-4">
+          <div className="backdrop-blur-sm border border-[#6E6A85] rounded-lg p-6 flex items-start space-x-4">
             <div className="flex-shrink-0">
-              <div className="w-12 h-12 rounded-full bg-[#2A2A3C] flex items-center justify-center ">
+              <div className="w-12 h-12 rounded-full bg-[#0d0d23] flex items-center justify-center ">
                 {skill.icon}
               </div>
             </div>

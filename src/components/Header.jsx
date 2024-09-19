@@ -41,7 +41,10 @@ const Header = () => {
     <header className="sticky top-0 z-10 bg-[#D4ADFC]/5 backdrop-blur-sm border-[1px] border-[#D4ADFC] rounded-sm">
       <div className="container mx-auto flex items-center justify-between p-4">
         <FadeIn>
-          <a href="#home" className="text-2xl font-bold text-[#D4ADFC]">
+          <a
+            href="#home"
+            className="text-2xl font-thin text-[#D4ADFC] tracking-widest"
+          >
             FRIRSTA
           </a>
         </FadeIn>

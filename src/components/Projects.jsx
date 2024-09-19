@@ -29,7 +29,7 @@ const projects = [
 
 const ProjectCard = ({ project }) => (
   <SlideIn direction={project.direction} delay={project.delay}>
-    <Card className="overflow-hidden bg-[#d4adfc]/5 border border-[#d4adfc] transition-transform hover:scale-105 max-w-[400px]">
+    <Card className="overflow-hidden backdrop-blur-sm border border-[#d4adfc]/80 max-w-[400px]">
       <CardContent className="p-0">
         <Image
           src={project.image}
@@ -38,16 +38,16 @@ const ProjectCard = ({ project }) => (
           height={400}
           className="w-full h-48 object-cover"
         />
-        <div className="p-6">
-          <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
-          <p className="mb-4">{project.description}</p>
+        <div className="p-6 flex flex-col justify-between h-[280px]">
+          <h3 className="mb-2 text-md font-semibold">{project.title}</h3>
+          <p className="mb-4 text-sm">{project.description}</p>
           <div className="flex justify-between">
-            <Button asChild variant="outline">
+            <Button asChild variant="outline" className="w-[45%]">
               <Link href={project.github} target="_blank">
                 View Code
               </Link>
             </Button>
-            <Button asChild variant="outline">
+            <Button asChild variant="outline" className="w-[45%]">
               <Link href={project.demo} target="_blank">
                 Live Demo
               </Link>
@@ -66,7 +66,7 @@ const Projects = () => {
         <div className="title-container">
           <AnimatedText text="Projects" />
         </div>
-        <div className="grid gap-8 md:grid-cols-2 justify-items-center">
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 justify-items-center">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
