@@ -6,6 +6,17 @@ import ContactFormError from "./ContactFormError";
 const Contact = () => {
   const [status, setStatus] = useState(null);
   const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -20,13 +31,21 @@ const Contact = () => {
       });
       if (res.status === 200) {
         setStatus("ok");
+        setSuccess(true);
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
       } else {
         setStatus("error");
         setError(`${res.status} ${res.statusText}`);
+        setErrorMessage(true);
       }
     } catch (e) {
       setStatus("error");
       setError(`${e}`);
+      console.error(e);
     }
   };
   return (
@@ -51,8 +70,10 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                name="form-name"
+                name="name"
                 id="name"
+                value={formData.name}
+                onChange={handleChange}
                 className="px-4 bg-[#D4ADFC]/5 rounded-sm border border-[#D4ADFC] block w-full py-2  placeholder:text-gray-400 sm:text-sm"
                 placeholder="Your Name"
                 required
@@ -66,6 +87,8 @@ const Contact = () => {
                 type="email"
                 name="email"
                 id="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="px-4 bg-[#D4ADFC]/5 rounded-sm border border-[#D4ADFC] block w-full py-2  placeholder:text-gray-400 sm:text-sm"
                 placeholder="your@email.com"
                 required
@@ -82,6 +105,8 @@ const Contact = () => {
                 name="message"
                 id="message"
                 rows="4"
+                value={formData.message}
+                onChange={handleChange}
                 className="px-4 bg-[#D4ADFC]/5 rounded-sm border border-[#D4ADFC] block w-full py-2  placeholder:text-gray-400 sm:text-sm"
                 placeholder="Your message here..."
                 required
@@ -92,16 +117,16 @@ const Contact = () => {
                 SEND MESSAGE
               </Button>
             </HoverScale>
-            {status === "ok" && (
+            {status === "ok" && success && (
               <div className="alert alert-success">
-                <ThankYouAnimation onClose={() => setError(null)} />
+                <ThankYouAnimation onClose={() => setSuccess(false)} />
               </div>
             )}
-            {status === "error" && error && (
+            {status === "error" && errorMessage && (
               <div className="alert alert-error">
                 <ContactFormError
                   message="Oops! Something went wrong. Please try again later."
-                  onClose={() => setError(null)}
+                  onClose={() => setErrorMessage(false)}
                 />
               </div>
             )}
@@ -112,38 +137,4 @@ const Contact = () => {
   );
 };
 
-function SuccessIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="stroke-current shrink-0 h-6 w-6"
-      fill="none"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-      />
-    </svg>
-  );
-}
-function ErrorIcon(success) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="stroke-current shrink-0 h-6 w-6"
-      fill="none"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-      />
-    </svg>
-  );
-}
 export default Contact;
