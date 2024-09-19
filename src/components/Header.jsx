@@ -34,12 +34,12 @@ const Header = () => {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <header className="sticky top-0 z-10 bg-[#D4ADFC]/5 backdrop-blur-md border-b-[1px] border-[#D4ADFC] rounded-sm">
+    <header className="sticky top-0 z-10 bg-[#0d0d23] rounded-sm">
       <div className="container mx-auto flex items-center justify-between p-4">
         <FadeIn>
           <a
             href="#home"
-            className="text-2xl font-thin text-[#D4ADFC] tracking-widest"
+            className="text-2xl font-thin text-[#E8E8E8] tracking-widest"
           >
             FRIRSTA
           </a>
