@@ -34,10 +34,9 @@ const About = () => {
           </div>
           <FadeIn delay={0.5}>
             <div className="w-full lg:w-[700px] text-2xl font-normal mt-20">
-              I&apos;m Frirsta - a front-end developer based in Stockholm. After
-              a career in retail, I transitioned into software development
-              driven by my passion for problem-solving and designing and
-              creating websites.
+              I&apos;m Frirsta - a front-end developer based in Stockholm. I
+              transitioned into software development driven by my passion for
+              problem-solving and designing and creating websites.
               <br />
               <br />
               Take a look at my resume, and feel free to reach out if you&apos;d

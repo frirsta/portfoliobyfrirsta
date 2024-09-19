@@ -1,58 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio by Frirsta
 
-## Getting Started
+Welcome to my personal portfolio website! This project is built with **Next.js** and showcases my work, skills, and experiences as a web designer and developer.
 
-First, run the development server:
+## Features
+
+- **Interactive Starry Background**: Dynamic canvas-based starry background that responds to mouse movements.
+- **Animated Text**: Engaging text animations for an interactive user experience.
+- **Responsive Design**: Optimized for various screen sizes and devices.
+- **Netlify Form Handling**: Contact form integration with Netlify for seamless form submissions.
+- **Skill and Experience Display**: Detailed sections showcasing skills, education, and professional experience.
+
+## Key Components
+
+- **components/Background.jsx:** Renders an interactive starry background using the Canvas API. Stars move based on mouse interaction and "blink" for a dynamic effect.
+
+- **components/Home.jsx:** Displays the main introduction section with animated text and action buttons.
+
+- **components/Projects.jsx:** Showcases projects with descriptions and links to code repositories and live demos. Uses ProjectCard for displaying each project.
+
+- **components/About.jsx:** Provides information about me with an animated photo and a resume download button.
+
+- **components/Resume.jsx:** Contains sections for skills and education/experience.
+
+- **components/Contact.jsx:** Contains the contact form handled by Netlify for form submissions.
+
+- **components/SkillGrid.jsx:** Displays a grid of skills with icons and descriptions.
+
+- **components/EducationExperience.jsx:** Shows sections for education and professional experience with a card layout.
+
+- **components/ResumeDownloadButton.jsx:** Provides a button to download the resume as a PDF.
+
+## Tech Stack
+
+- **Next.js**: Framework for React-based applications.
+- **Shadcn UI Components**: For consistent and reusable UI components.
+- **Framer Motion**: For animations and transitions.
+- **Canvas API**: Used for the interactive starry background effect.
+- **Netlify**: For form handling and site deployment.
+- **Lucide Icons**: For various UI icons.
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+### Prerequisites
+
+- **Node.js** (version 14.x or higher)
+- **npm** or **yarn**
+
+### Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/frirsta/portfoliobyfrirsta.git
+cd portfoliobyfrirsta
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-npx shadcn@latest add button
-
-npx shadcn@latest add input
-npx shadcn@latest add textarea
-npx shadcn@latest add card
-npx shadcn@latest add tabs
-npx v0 add Z956b6i7k7g
-npx shadcn@latest add badge
-npx shadcn@latest add alert
-
-npx shadcn@latest add skeleton
-
-npm i sharp
-
-npm install lucide-react
-npm install nodemailer
-npm install --save @next/bundle-analyzer
-npm install framer-motion
-
-canvas-confetti
-npm install gsap
