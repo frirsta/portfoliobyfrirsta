@@ -36,18 +36,20 @@ const Contact = () => {
         <FadeIn delay={0.3}>
           <form
             className="space-y-6"
-            name="feedback"
+            name="contact"
             onSubmit={handleFormSubmit}
             method="POST"
             data-netlify="true"
           >
+            {" "}
+            <input type="hidden" name="form-name" value="contact" />
             <div>
               <label htmlFor="name" className="block text-sm font-medium mb-2">
                 Name
               </label>
               <input
                 type="text"
-                name="name"
+                name="form-name"
                 id="name"
                 className="px-4 bg-[#D4ADFC]/5 rounded-sm border border-[#D4ADFC] block w-full py-2  placeholder:text-gray-400 sm:text-sm"
                 placeholder="Your Name"
